@@ -23,14 +23,16 @@
           <base-dropdown tag="li">
             <template slot="title">
               <i class="nc-icon nc-planet"></i>
-              <b class="caret"></b>
-              <span class="notification">5</span>
+         <!--       <b class="caret"></b> -->
+         <!--      <span class="notification"></span> -->
             </template>
+
+ <!--       通知    
             <a class="dropdown-item" href="#">Notification 1</a>
             <a class="dropdown-item" href="#">Notification 2</a>
             <a class="dropdown-item" href="#">Notification 3</a>
             <a class="dropdown-item" href="#">Notification 4</a>
-            <a class="dropdown-item" href="#">Another notification</a>
+            <a class="dropdown-item" href="#">Another notification</a>  -->
           </base-dropdown>
           <li class="nav-item">
             <a href="#" class="nav-link">

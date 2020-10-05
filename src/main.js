@@ -17,11 +17,17 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import App from './App.vue'
 
+import vuetify from './plugins/vuetify'
 // LightBootstrap plugin
 import LightBootstrap from './light-bootstrap-main'
 
 // router setup
 import routes from './routes/routes'
+
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded; charset=UTF-8';
+Vue.use(VueAxios, axios)
 
 import './registerServiceWorker'
 // plugin setup
@@ -44,6 +50,7 @@ const router = new VueRouter({
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
+  vuetify,
   render: h => h(App),
   router
 })

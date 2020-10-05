@@ -27,14 +27,14 @@
       <div class="row" style="float:right; padding:0px">
         <h2>讓我們幫你讀懂。</h2>
         <br>
-        <h2><a class="nc-icon nc-button-power text-primary" href="/user"> 點此開始</a></h2>
+        <h2><a class="nc-icon nc-button-power text-primary" href="/#/admin/askQuestionsChooseCompany"> 點此開始</a></h2>
       </div>
  
       <br>
       <br>
       <br>
       <!-- <div class="row" style="float: right;">
-      <h2><a class="nc-icon nc-button-power text-success" href="/user"> 點此開始</a></h2>      
+      <h2><a class="nc-icon nc-button-power text-success" href="askQuestionsChooseCompany"> 點此開始</a></h2>      
       </div> -->
 
   
@@ -226,7 +226,8 @@
           ]
         }
       }
-    }
+    },
+
   }
 </script>
 <style>

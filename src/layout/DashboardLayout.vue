@@ -2,15 +2,19 @@
   <div class="wrapper">
     <side-bar>
       <mobile-menu slot="content"></mobile-menu>
+      <sidebar-link to="/admin/login">
+        <i class="nc-icon nc-atom"></i>
+        <p>登入</p>
+      </sidebar-link>
       <sidebar-link to="/admin/about">
         <i class="nc-icon nc-app"></i>
         <p>關於我們</p>
       </sidebar-link>
-      <sidebar-link to="/admin/user">
+      <sidebar-link to="/admin/askQuestionsChooseCompany">
         <i class="nc-icon nc-bulb-63"></i>
         <p>提出查詢</p>
       </sidebar-link>
-      <sidebar-link to="/admin/table-list">
+      <sidebar-link to="/admin/recordsChooseCompany">
         <i class="nc-icon nc-notes"></i>
         <p>歷史詢問</p>
       </sidebar-link>
@@ -20,8 +24,11 @@
       </sidebar-link>
       <sidebar-link to="/admin/overview">
         <i class="nc-icon nc-app"></i>
-        <p>統計圖們</p>
+        <p>統計資訊</p>
       </sidebar-link>
+
+
+   <!--    多的左側換頁
       <sidebar-link to="/admin/icons">
         <i class="nc-icon nc-atom"></i>
         <p>Icons</p>
@@ -33,7 +40,7 @@
       <sidebar-link to="/admin/notifications">
         <i class="nc-icon nc-bell-55"></i>
         <p>Notifications</p>
-      </sidebar-link>
+      </sidebar-link> 
 
       <template slot="bottom-links">
         <sidebar-link class="active"
@@ -41,7 +48,8 @@
           <i class="nc-icon nc-alien-33"></i>
           <p>Upgrade to PRO</p>
         </sidebar-link>
-      </template>
+      </template> 
+  -->
     </side-bar>
     <div class="main-panel">
       <top-navbar></top-navbar>
@@ -50,7 +58,7 @@
 
       </dashboard-content>
 
-      <content-footer></content-footer>
+<!-- 底下的      <content-footer></content-footer> -->
     </div>
   </div>
 </template>

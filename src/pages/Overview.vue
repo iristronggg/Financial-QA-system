@@ -97,6 +97,7 @@
                 <i class="fa fa-circle text-info"></i> Open
                 <i class="fa fa-circle text-danger"></i> Bounce
                 <i class="fa fa-circle text-warning"></i> Unsubscribe
+                <i class="fa fa-circle text-warning"></i> Unsubscribe
               </div>
               <hr>
               <div class="stats">
@@ -186,8 +187,8 @@
         deleteTooltip: 'Remove',
         pieChart: {
           data: {
-            labels: ['40%', '20%', '40%'],
-            series: [40, 20, 40]
+            labels: ['40%', '20%', '35%','5%'],
+            series: [40, 20, 35, 5]
           }
         },
         lineChart: {

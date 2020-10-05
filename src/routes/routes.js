@@ -12,17 +12,54 @@ import Icons from 'src/pages/Icons.vue'
 import Maps from 'src/pages/Maps.vue'
 import Notifications from 'src/pages/Notifications.vue'
 import Upgrade from 'src/pages/Upgrade.vue'
+import Login from 'src/pages/Login.vue';
+import AskQuestionsChooseCompany from 'src/pages/AskQuestionsChooseCompany.vue'
+import AskQuestions from 'src/pages/AskQuestions.vue'
+import RecordsChooseCompany from 'src/pages/RecordsChooseCompany.vue'
+import Records from 'src/pages/Records.vue'
 
 const routes = [{
         path: '/',
         component: DashboardLayout,
-        redirect: '/admin/overview'
+        redirect: '/admin/about'
     },
     {
         path: '/admin',
         component: DashboardLayout,
         redirect: '/admin/overview',
-        children: [{
+        children: [
+              {
+                path: 'login',
+                name: 'Login',
+                component: Login,
+              },
+              {
+                path: 'askQuestionsChooseCompany',
+                name: 'AskQuestionsChooseCompany',
+                component: AskQuestionsChooseCompany,
+              },
+        
+              {
+                path: 'askQuestions',
+                name: 'AskQuestions',
+                component: AskQuestions,
+              },
+        
+              {
+                path: 'recordsChooseCompany',
+                name: 'RecordsChooseCompany',
+                component: RecordsChooseCompany,
+                props: true,
+              },
+        
+              {
+                  path: 'records',
+                  name: 'Records',
+                  component: Records,
+                  props: true,
+              },
+            
+            {
                 path: 'about',
                 name: 'About',
                 component: About
