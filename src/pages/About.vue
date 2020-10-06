@@ -1,132 +1,28 @@
 <template>
   <div class="content">
     <div class="container-fluid">
-      <div class="row">
-          <h2><i class="nc-icon nc-single-copy-04"></i>｜總是看不懂年報或財報嗎？</h2>
+      <div >
+          <h2 style="color:white"><i class="nc-icon nc-single-copy-04"></i>｜想要快速獲得年報或財報資訊嗎？</h2>
+          
+      </div>
+      
+
+      <div style="margin:0px">
+        <img src="../../public/img/report.png" width=73% style="float:right">
       </div>
 
-        <!-- <div class="col-xl-3 col-md-6" style="width: 500px; max-width: 90%;">
-          <stats-card>
-            <div slot="header" class="icon-warning">
-              <i class="nc-icon nc-chart text-warning"></i>
-            </div>
-            <div slot="content">
-              <p class="card-category">Capacity</p>
-              <h4 class="card-title">總是看不懂年報或財報嗎？</h4>
-            </div>
-            <div slot="footer">
-              <i class="fa fa-refresh"></i>Updated now
-            </div>
-          </stats-card>
-        </div> -->
-
-      <div class="row" style="margin:0px">
-        <img src="../../public/img/report.png" width=65%>
+      <div style="float:right; padding:0px">
+        <h2 style="color:white;">立即開啟問答機器人</h2>
+        <h3><a class="nc-icon nc-button-power text-primary" href="/#/admin/askQuestionsChooseCompany" style="float:right"> 點此開始</a></h3>
+        
+        
       </div>
-
-      <div class="row" style="float:right; padding:0px">
-        <h2>讓我們幫你讀懂。</h2>
-        <br>
-        <h2><a class="nc-icon nc-button-power text-primary" href="/#/admin/askQuestionsChooseCompany"> 點此開始</a></h2>
-      </div>
+  
+     
  
       <br>
       <br>
-      <br>
-      <!-- <div class="row" style="float: right;">
-      <h2><a class="nc-icon nc-button-power text-success" href="askQuestionsChooseCompany"> 點此開始</a></h2>      
-      </div> -->
-
-  
-
-
-      <!-- <div class="col-md-8">
-          <card>
-            
-          </card>
-          </div> 
-      -->
-
-        <!-- <div class="col-md-4">
-          <chart-card :chart-data="pieChart.data" chart-type="Pie">
-            <template slot="header">
-              <h4 class="card-title">Email Statistics</h4>
-              <p class="card-category">Last Campaign Performance</p>
-            </template>
-            <template slot="footer">
-              <div class="legend">
-                <i class="fa fa-circle text-info"></i> Open
-                <i class="fa fa-circle text-danger"></i> Bounce
-                <i class="fa fa-circle text-warning"></i> Unsubscribe
-              </div>
-              <hr>
-              <div class="stats">
-                <i class="fa fa-clock-o"></i> Campaign sent 2 days ago
-              </div>
-            </template>
-          </chart-card>
-        </div>
-      </div> -->
-
-      <!-- <div class="row">
-        <div class="col-md-6">
-          <chart-card
-            :chart-data="barChart.data"
-            :chart-options="barChart.options"
-            :chart-responsive-options="barChart.responsiveOptions"
-            chart-type="Bar">
-            <template slot="header">
-              <h4 class="card-title">2014 Sales</h4>
-              <p class="card-category">All products including Taxes</p>
-            </template>
-            <template slot="footer">
-              <div class="legend">
-                <i class="fa fa-circle text-info"></i> Tesla Model S
-                <i class="fa fa-circle text-danger"></i> BMW 5 Series
-              </div>
-              <hr>
-              <div class="stats">
-                <i class="fa fa-check"></i> Data information certified
-              </div>
-            </template>
-          </chart-card>
-        </div> -->
-
-        <!-- <div class="col-md-6">
-          <card>
-            <template slot="header">
-              <h5 class="title">Tasks</h5>
-              <p class="category">Backend development</p>
-            </template>
-            <l-table :data="tableData.data"
-                     :columns="tableData.columns">
-              <template slot="columns"></template>
-
-              <template slot-scope="{row}">
-                <td>
-                  <base-checkbox v-model="row.checked"></base-checkbox>
-                </td>
-                <td>{{row.title}}</td>
-                <td class="td-actions text-right">
-                  <button type="button" class="btn-simple btn btn-xs btn-info" v-tooltip.top-center="editTooltip">
-                    <i class="fa fa-edit"></i>
-                  </button>
-                  <button type="button" class="btn-simple btn btn-xs btn-danger" v-tooltip.top-center="deleteTooltip">
-                    <i class="fa fa-times"></i>
-                  </button>
-                </td>
-              </template>
-            </l-table>
-            <div class="footer">
-              <hr>
-              <div class="stats">
-                <i class="fa fa-history"></i> Updated 3 minutes ago
-              </div>
-            </div>
-          </card>
-
-        </div> -->
-      
+      <br>  
     </div>
   </div>
 </template>
@@ -134,7 +30,6 @@
   import ChartCard from 'src/components/Cards/ChartCard.vue'
   import StatsCard from 'src/components/Cards/StatsCard.vue'
   import LTable from 'src/components/Table.vue'
-
   export default {
     components: {
       LTable,
@@ -227,9 +122,31 @@
         }
       }
     },
-
   }
 </script>
-<style>
+<style type="text/css">
+.content
+{
+  /*  background: linear-gradient(#062274, #2563f4); 
+  background: url('../../public/img/report.png'); 
+   background: linear-gradient(#062274, #fcfcfc);
+   background-size:contain;
+   background-repeat: no-repeat;
+   background: url('../../public/img/star03.jpg'); 
+  background-size: cover;
+    background-image: linear-gradient(
+    0deg,
+    rgba(247,247,247,1) 23.8%,
+    rgba(0,0,0,0.2) 92%
+  );
+  background-color:black;
+  */
+  background: url('../../public/img/black.jpg'); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.9;
 
+ 
+   
+}
 </style>
