@@ -7,10 +7,10 @@
             <stats-card style="background-color: #ffe384; opacity: 0.9;">
               
               <div slot="content">
-                <h4 class="card-title"><strong>最常被搜尋公司排行榜</strong></h4>
+                <h4 class="card-title" style="color: black;"><strong>最常被搜尋公司排行榜</strong></h4>
               </div>
               <div slot="header" class="icon-warning">
-                <i class="nc-icon nc-zoom-split text-warning"></i>
+                <i class="nc-icon nc-zoom-split text-primary"></i>
               </div>
             </stats-card>
         </div>
@@ -66,13 +66,13 @@
       </div>
         
       
-      <div class="row">
+      <div class="row" style="opacity: 0.9;">
         <div class="col-xl-5 col-md-5">
            <card class="strpied-tabled-with-hover"
                 body-classes="table-full-width table-responsive"
           >
             <template slot="header">
-              <h4 class="card-title">看看大家都在問什麼</h4>
+              <h4 class="card-title"><strong>看看大家都在問什麼</strong></h4>
               <p class="card-category">你可能也會想知道</p>
             </template>
             <l-table class="table-hover table-striped"

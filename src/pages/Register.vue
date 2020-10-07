@@ -81,7 +81,7 @@ export default {
 <style scoped>
 .register {
     width: 800px;
-    height: 600px;
+    height: 500px;
     border: 1px solid #cccccc;
     background-color: white;
     opacity: 0.85;
