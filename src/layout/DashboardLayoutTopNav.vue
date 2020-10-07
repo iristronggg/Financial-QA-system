@@ -22,12 +22,8 @@
         <i class="nc-icon nc-notes"></i>
         <p>歷史詢問</p>
       </sidebar-link>
-      <sidebar-link to="/admin/typography">
-        <i class="nc-icon nc-light-3"></i>
-        <p>大家都在問</p>
-      </sidebar-link>
       <sidebar-link to="/overview">
-        <i class="nc-icon nc-app"></i>
+        <i class="nc-icon nc-puzzle-10"></i>
         <p>統計資訊</p>
       </sidebar-link>
 

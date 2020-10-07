@@ -24,7 +24,7 @@
       </sidebar-link>
       
       <sidebar-link to="/overview">
-        <i class="nc-icon nc-app"></i>
+        <i class="nc-icon nc-puzzle-10"></i>
         <p>統計資訊</p>
       </sidebar-link>
 

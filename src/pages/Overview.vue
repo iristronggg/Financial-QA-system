@@ -4,9 +4,13 @@
       <div class="row">
 
         <div class="col-xl-3 col-md-6" id="searchTitle">
-            <stats-card style="background-color: white ; opacity: 0.9;">
+            <stats-card style="background-color: #ffe384; opacity: 0.9;">
+              
               <div slot="content">
-                <h4>最常被搜尋公司排行榜</h4>
+                <h4 class="card-title"><strong>最常被搜尋公司排行榜</strong></h4>
+              </div>
+              <div slot="header" class="icon-warning">
+                <i class="nc-icon nc-zoom-split text-warning"></i>
               </div>
             </stats-card>
         </div>
@@ -18,10 +22,10 @@
              </div>
 
             <div slot="header" class="icon-warning">
-              <i class="nc-icon nc-chart text-warning"></i>
+              <i class="nc-icon nc-bank text-warning"></i>
             </div>
             <div slot="content">
-              <p class="card-category">No.1</p>
+              <p class="card-category"><strong>No.1</strong></p>
               <h5 class="card-title">台灣積體電路製造股份有限公司</h5>
             </div>
             
@@ -35,10 +39,10 @@
              </div>
 
             <div slot="header" class="icon-success">
-              <i class="nc-icon nc-chart text-success"></i>
+              <i class="nc-icon nc-bank text-success"></i>
             </div>
             <div slot="content">
-              <p class="card-category">No.2</p>
+              <p class="card-category"><strong>No.2</strong></p>
               <h5 class="card-title">台灣中油股份有限公司</h5>
             </div>         
           </stats-card>
@@ -50,10 +54,10 @@
              </div>
 
             <div slot="header" class="icon-danger">
-              <i class="nc-icon nc-chart text-danger"></i>
+              <i class="nc-icon nc-bank text-danger"></i>
             </div>
             <div slot="content">
-              <p class="card-category">No.3</p>
+              <p class="card-category"><strong>No.3</strong></p>
               <h5 class="card-title">台達電子工業股份有限公司</h5>
             </div>         
           </stats-card>

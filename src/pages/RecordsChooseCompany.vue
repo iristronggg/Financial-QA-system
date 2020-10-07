@@ -23,18 +23,9 @@
                                 input
                     ></v-autocomplete>
 
-
-                 <br>
-                 <br>
-                 <br>
-                 <br>
-                 <br>
-                 <br>
-                 <br>
-                 <br>
-                 <br>
-                 <br>
-                 <br>
+                <br>
+                <br>
+                <br>
 
                 <div class="text-center">
                     <v-btn style="margin: 5px;" @click="getCompanyRecord()">確定選擇</v-btn>
