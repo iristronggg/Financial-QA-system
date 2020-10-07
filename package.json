@@ -28,6 +28,7 @@
     "vue": "^2.6.6",
     "vue-axios": "^2.1.5",
     "vue-router": "^3.0.2",
+    "vue-wordcloud": "^1.1.1",
     "vue2-google-maps": "^0.8.4",
     "vuetify": "^2.3.12"
   },

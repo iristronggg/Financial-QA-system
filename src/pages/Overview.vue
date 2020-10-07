@@ -2,70 +2,86 @@
   <div class="content">
     <div class="container-fluid">
       <div class="row">
+
+        <div class="col-xl-3 col-md-6" id="searchTitle">
+            <stats-card style="background-color: white ; opacity: 0.9;">
+              <div slot="content">
+                <h4>最常被搜尋公司排行榜</h4>
+              </div>
+            </stats-card>
+        </div>
+
         <div class="col-xl-3 col-md-6">
           <stats-card>
+             <div class="typo-line">
+              <h2 style="color:white"></h2>
+             </div>
+
             <div slot="header" class="icon-warning">
               <i class="nc-icon nc-chart text-warning"></i>
             </div>
             <div slot="content">
-              <p class="card-category">Capacity</p>
-              <h4 class="card-title">105GB</h4>
+              <p class="card-category">No.1</p>
+              <h5 class="card-title">台灣積體電路製造股份有限公司</h5>
             </div>
-            <div slot="footer">
-              <i class="fa fa-refresh"></i>Updated now
-            </div>
+            
           </stats-card>
         </div>
 
         <div class="col-xl-3 col-md-6">
-          <stats-card>
+           <stats-card>
+             <div class="typo-line">
+              <h2 style="color:white"></h2>
+             </div>
+
             <div slot="header" class="icon-success">
-              <i class="nc-icon nc-light-3 text-success"></i>
+              <i class="nc-icon nc-chart text-success"></i>
             </div>
             <div slot="content">
-              <p class="card-category">Revenue</p>
-              <h4 class="card-title">$1,345</h4>
-            </div>
-            <div slot="footer">
-              <i class="fa fa-calendar-o"></i>Last day
-            </div>
+              <p class="card-category">No.2</p>
+              <h5 class="card-title">台灣中油股份有限公司</h5>
+            </div>         
           </stats-card>
         </div>
-
         <div class="col-xl-3 col-md-6">
-          <stats-card>
+           <stats-card>
+             <div class="typo-line">
+              <h2 style="color:white"></h2>
+             </div>
+
             <div slot="header" class="icon-danger">
-              <i class="nc-icon nc-vector text-danger"></i>
+              <i class="nc-icon nc-chart text-danger"></i>
             </div>
             <div slot="content">
-              <p class="card-category">Errors</p>
-              <h4 class="card-title">23</h4>
-            </div>
-            <div slot="footer">
-              <i class="fa fa-clock-o"></i>Last day
-            </div>
-          </stats-card>
-        </div>
-
-        <div class="col-xl-3 col-md-6">
-          <stats-card>
-            <div slot="header" class="icon-info">
-              <i class="nc-icon nc-favourite-28 text-primary"></i>
-            </div>
-            <div slot="content">
-              <p class="card-category">Followers</p>
-              <h4 class="card-title">+45</h4>
-            </div>
-            <div slot="footer">
-              <i class="fa fa-refresh"></i>Updated now
-            </div>
+              <p class="card-category">No.3</p>
+              <h5 class="card-title">台達電子工業股份有限公司</h5>
+            </div>         
           </stats-card>
         </div>
 
       </div>
+        <wordcloud
+                :data="defaultWords"
+                nameKey="name"
+                valueKey="value"
+                :color="myColors"
+                :showTooltip="true"
+                :wordClick="wordClickHandler">
+        </wordcloud>
+      
       <div class="row">
-        <div class="col-md-8">
-          <chart-card :chart-data="lineChart.data"
+        <div class="col-xl-4 col-md-4">
+          
+           <!-- <wordcloud
+            :data="defaultWords"
+            nameKey="name"
+            valueKey="value"
+            :color="myColors"
+            :showTooltip="false"
+            :wordClick="wordClickHandler">
+            </wordcloud> -->
+            
+          <!-- <chart-card :chart-data="lineChart.data"
                       :chart-options="lineChart.options"
                       :responsive-options="lineChart.responsiveOptions">
             <template slot="header">
@@ -83,11 +99,11 @@
                 <i class="fa fa-history"></i> Updated 3 minutes ago
               </div>
             </template>
-          </chart-card>
+          </chart-card> -->
         </div>
 
         <div class="col-md-4">
-          <chart-card :chart-data="pieChart.data" chart-type="Pie">
+          <!-- <chart-card :chart-data="pieChart.data" chart-type="Pie">
             <template slot="header">
               <h4 class="card-title">Email Statistics</h4>
               <p class="card-category">Last Campaign Performance</p>
@@ -104,13 +120,13 @@
                 <i class="fa fa-clock-o"></i> Campaign sent 2 days ago
               </div>
             </template>
-          </chart-card>
+          </chart-card> -->
         </div>
       </div>
 
       <div class="row">
         <div class="col-md-6">
-          <chart-card
+          <!-- <chart-card
             :chart-data="barChart.data"
             :chart-options="barChart.options"
             :chart-responsive-options="barChart.responsiveOptions"
@@ -129,11 +145,11 @@
                 <i class="fa fa-check"></i> Data information certified
               </div>
             </template>
-          </chart-card>
+          </chart-card> -->
         </div>
 
         <div class="col-md-6">
-          <card>
+          <!-- <card>
             <template slot="header">
               <h5 class="title">Tasks</h5>
               <p class="category">Backend development</p>
@@ -163,7 +179,7 @@
                 <i class="fa fa-history"></i> Updated 3 minutes ago
               </div>
             </div>
-          </card>
+          </card> -->
 
         </div>
       </div>
@@ -174,15 +190,48 @@
   import ChartCard from 'src/components/Cards/ChartCard.vue'
   import StatsCard from 'src/components/Cards/StatsCard.vue'
   import LTable from 'src/components/Table.vue'
+  import wordcloud from 'vue-wordcloud'
 
   export default {
     components: {
       LTable,
       ChartCard,
-      StatsCard
+      StatsCard,
+      wordcloud
     },
+    methods: {
+    wordClickHandler(name, value, vm) {
+      console.log('wordClickHandler', name, value, vm);
+    }
+  },
     data () {
       return {
+         myColors: ['#1f77b4', '#629fc9', '#94bedb', '#c9e0ef'],
+      defaultWords: [{
+          "name": "經營近況",
+          "value": 27
+        },
+        {
+          "name": "公司股價",
+          "value": 32
+        },
+        {
+          "name": "新產品",
+          "value": 28
+        },
+        {
+          "name": "營業收入",
+          "value": 25
+        },
+        {
+          "name": "負責人",
+          "value": 24
+        },
+        {
+          "name": "未來展望",
+          "value": 31
+        }
+      ],
         editTooltip: 'Edit Task',
         deleteTooltip: 'Remove',
         pieChart: {
@@ -269,6 +318,22 @@
     }
   }
 </script>
-<style>
+<style type="text/css">
+.card-title:hover {
+    /* transform: scaleY(1.2);
+    transform: scaleX(1.1); */
+    font-size:22px;
+    color: #323ea8;
 
+   
+}
+
+#searchTitle:hover{
+    animation: shake 3s;
+
+  /* When the animation is finished, start again */
+  animation-iteration-count: infinite;
+
+
+}
 </style>
