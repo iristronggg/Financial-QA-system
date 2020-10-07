@@ -60,7 +60,26 @@
         </div>
 
       </div>
-        <wordcloud
+        
+      
+      <div class="row">
+        <div class="col-xl-5 col-md-5">
+           <card class="strpied-tabled-with-hover"
+                body-classes="table-full-width table-responsive"
+          >
+            <template slot="header">
+              <h4 class="card-title">看看大家都在問什麼</h4>
+              <p class="card-category">你可能也會想知道</p>
+            </template>
+            <l-table class="table-hover table-striped"
+                     :columns="table1.columns"
+                     :data="table1.data">
+            </l-table>
+          </card>
+        </div>
+
+        <div class="col-md-4">
+          <wordcloud
                 :data="defaultWords"
                 nameKey="name"
                 valueKey="value"
@@ -68,59 +87,7 @@
                 :showTooltip="true"
                 :wordClick="wordClickHandler">
         </wordcloud>
-      
-      <div class="row">
-        <div class="col-xl-4 col-md-4">
           
-           <!-- <wordcloud
-            :data="defaultWords"
-            nameKey="name"
-            valueKey="value"
-            :color="myColors"
-            :showTooltip="false"
-            :wordClick="wordClickHandler">
-            </wordcloud> -->
-            
-          <!-- <chart-card :chart-data="lineChart.data"
-                      :chart-options="lineChart.options"
-                      :responsive-options="lineChart.responsiveOptions">
-            <template slot="header">
-              <h4 class="card-title">Users Behavior</h4>
-              <p class="card-category">24 Hours performance</p>
-            </template>
-            <template slot="footer">
-              <div class="legend">
-                <i class="fa fa-circle text-info"></i> Open
-                <i class="fa fa-circle text-danger"></i> Click
-                <i class="fa fa-circle text-warning"></i> Click Second Time
-              </div>
-              <hr>
-              <div class="stats">
-                <i class="fa fa-history"></i> Updated 3 minutes ago
-              </div>
-            </template>
-          </chart-card> -->
-        </div>
-
-        <div class="col-md-4">
-          <!-- <chart-card :chart-data="pieChart.data" chart-type="Pie">
-            <template slot="header">
-              <h4 class="card-title">Email Statistics</h4>
-              <p class="card-category">Last Campaign Performance</p>
-            </template>
-            <template slot="footer">
-              <div class="legend">
-                <i class="fa fa-circle text-info"></i> Open
-                <i class="fa fa-circle text-danger"></i> Bounce
-                <i class="fa fa-circle text-warning"></i> Unsubscribe
-                <i class="fa fa-circle text-warning"></i> Unsubscribe
-              </div>
-              <hr>
-              <div class="stats">
-                <i class="fa fa-clock-o"></i> Campaign sent 2 days ago
-              </div>
-            </template>
-          </chart-card> -->
         </div>
       </div>
 
@@ -191,6 +158,29 @@
   import StatsCard from 'src/components/Cards/StatsCard.vue'
   import LTable from 'src/components/Table.vue'
   import wordcloud from 'vue-wordcloud'
+  const tableColumns = ['公司', '問題', '答案']
+  const tableData = [{
+    id: 1,
+    name: 'Dakota Rice',
+    公司: '台積電',
+    問題: '最近研發的產品',
+    答案: ''
+  },
+  {
+    id: 2,
+    name: '',
+    公司: '台糖',
+    問題: '',
+    答案: ''
+  },
+  {
+    id: 3,
+    name: '',
+    公司: '宏達電',
+    問題: '',
+    答案: ''
+  }
+  ]
 
   export default {
     components: {
@@ -206,6 +196,11 @@
   },
     data () {
       return {
+        
+   table1: {
+          columns: [...tableColumns],
+          data: [...tableData]
+        },
          myColors: ['#1f77b4', '#629fc9', '#94bedb', '#c9e0ef'],
       defaultWords: [{
           "name": "經營近況",
