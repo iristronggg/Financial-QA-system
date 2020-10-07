@@ -16,7 +16,7 @@
       </div>
       <div style="float:right; padding:0px; margin:0px;">
         <h4 style="color:white;"> 立即開啟問答機器人</h4>
-        <h1><a href="/#/login" style="display:inline-block; float:right; font-family: Trebuchet MS; color: #ffe384;"><b> START> </b></a></h1>
+        <h1><a href="/#/login" style="float:right; font-family: Trebuchet MS;" class="text-warning"><strong> START> </strong></a></h1>
       </div> 
       
     </div>
