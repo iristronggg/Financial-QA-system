@@ -109,9 +109,10 @@ export default {
 
 .chooseCompany {
     width: 500px;
-    height: 500px;
+    height: 400px;
     border: 1px solid #cccccc;
-  
+    background-color: white;
+    opacity: 0.85;
     margin: auto;
     margin-top: 80px;
     padding: 20px;

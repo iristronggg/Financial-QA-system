@@ -82,8 +82,9 @@ export default {
 .register {
     width: 800px;
     height: 600px;
-    /* border: 1px solid #cccccc; */
-    /* background-color: #000000; */
+    border: 1px solid #cccccc;
+    background-color: white;
+    opacity: 0.85;
     margin: auto;
     margin-top: 80px;
     padding: 20px;

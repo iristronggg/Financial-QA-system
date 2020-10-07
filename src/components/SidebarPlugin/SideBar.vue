@@ -57,7 +57,7 @@
       },
       backgroundImage: {
         type: String,
-        default: 'img/outer-space-manuel-dietrich-photography-e1505429618468-1.jpg'
+        default: 'img/black.jpg'
       },
       activeColor: {
         type: String,

@@ -3,8 +3,12 @@
     <side-bar>
       <mobile-menu slot="content"></mobile-menu>
       <sidebar-link to="/login">
-        <i class="nc-icon nc-atom"></i>
+        <i class="nc-icon nc-single-02"></i>
         <p>登入</p>
+      </sidebar-link>
+      <sidebar-link to="/register">
+        <i class="nc-icon nc-atom"></i>
+        <p>註冊</p>
       </sidebar-link>
       <sidebar-link to="/about">
         <i class="nc-icon nc-app"></i>

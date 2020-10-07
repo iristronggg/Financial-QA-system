@@ -125,7 +125,7 @@
   }
 </script>
 <style type="text/css">
-.content
+.main-panel
 {
   /*  background: linear-gradient(#062274, #2563f4); 
   background: url('../../public/img/report.png'); 
@@ -141,7 +141,7 @@
   );
   background-color:black;
   */
-  background: url('../../public/img/black.jpg'); 
+  background: url('../../public/img/star.jpg'); 
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.9;

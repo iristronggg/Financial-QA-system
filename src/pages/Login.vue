@@ -60,12 +60,12 @@ export default {
                 },
             })
                 .then((response) => {
-                    console.log(response);
+                    console.log(response.data);
                 })
-                // .catch((error) => {
-                //             // eslint-disable-next-line
-                //             console.log(error);
-                // });
+                .catch((error) => {
+                            // eslint-disable-next-line
+                            console.log(error);
+                });
             this.$router.push({ path: '/admin/askQuestionsChooseCompany' });
             // query 帶參數過去
             // https://router.vuejs.org/zh/guide/essentials/navigation.html
@@ -79,7 +79,8 @@ export default {
     width: 500px;
     height: 450px;
     border: 1px solid #cccccc;
-    /* background-color: #000000; */
+    background-color: white;
+    opacity: 0.85;
     margin: auto;
     margin-top: 80px;
     padding: 20px;
