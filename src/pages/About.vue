@@ -1,19 +1,19 @@
 <template>
   <div class="content">
     <div class="container-fluid">
-      <div >
+      <div>
           <h2 style="color:white"><i class="nc-icon nc-single-copy-04"></i>｜想要快速獲得年報或財報資訊嗎？</h2>
           
       </div>
       
 
       <div style="margin:0px">
-        <img src="../../public/img/report.png" width=73% style="float:right">
+        <img src="../../public/img/report.png" width=70% style="float:right">
       </div>
 
       <div style="float:right; padding:0px">
-        <h2 style="color:white;">立即開啟問答機器人</h2>
-        <h3><a class="nc-icon nc-button-power text-primary" href="/#/login" style="float:right"> 點此開始</a></h3>
+        <h2 style="color:white; font-family: Trebuchet MS;"><strong>FinAncer</strong>, Find Answer ! </h2><h3 style="color:white;"> 立即開啟問答機器人</h3>
+        <h1><a class="text-primary" href="/#/login" style="float:right; font-family: Trebuchet MS;"><b> START</b></a></h1>
         
         
       </div>

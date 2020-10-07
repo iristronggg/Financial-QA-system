@@ -45,7 +45,7 @@
     props: {
       title: {
         type: String,
-        default: '年報QA'
+        default: 'FinAncer'
       },
       backgroundColor: {
         type: String,
