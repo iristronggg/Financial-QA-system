@@ -7,22 +7,18 @@
       </div>
       
 
-      <div style="margin:0px">
-        <img src="../../public/img/report.png" width=70% style="float:right">
+      <div style="margin:20px; float:right">
+        <img src="../../public/img/report.png" width=70% style="float: right">
       </div>
 
-      <div style="float:right; padding:0px">
-        <h2 style="color:white; font-family: Trebuchet MS;"><strong>FinAncer</strong>, Find Answer ! </h2><h3 style="color:white;"> 立即開啟問答機器人</h3>
-        <h1><a class="text-primary" href="/#/login" style="float:right; font-family: Trebuchet MS;"><b> START</b></a></h1>
-        
-        
+      <div style="padding: 0px; margin:0px;">
+        <h2 style="text-align: center; color:white; font-family: Trebuchet MS;"><strong>FinAncer</strong>, Find Answer ! </h2>
       </div>
-  
-     
- 
-      <br>
-      <br>
-      <br>  
+      <div style="float:right; padding:0px; margin:0px;">
+        <h4 style="color:white;"> 立即開啟問答機器人</h4>
+        <h1><a class="text-primary" href="/#/login" style="float:right; font-family: Trebuchet MS;"><b> START> </b></a></h1>
+      </div> 
+      
     </div>
   </div>
 </template>
