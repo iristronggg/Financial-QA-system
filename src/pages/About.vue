@@ -13,7 +13,7 @@
 
       <div style="float:right; padding:0px">
         <h2 style="color:white;">立即開啟問答機器人</h2>
-        <h3><a class="nc-icon nc-button-power text-primary" href="/#/admin/askQuestionsChooseCompany" style="float:right"> 點此開始</a></h3>
+        <h3><a class="nc-icon nc-button-power text-primary" href="/#/login" style="float:right"> 點此開始</a></h3>
         
         
       </div>

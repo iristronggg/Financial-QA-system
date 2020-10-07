@@ -45,7 +45,7 @@
   import MobileMenu from './MobileMenu.vue'
   export default {
     components: {
-      //TopNavbar,
+      TopNavbar,
       ContentFooter,
       DashboardContent,
       MobileMenu

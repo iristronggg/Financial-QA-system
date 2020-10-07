@@ -58,7 +58,7 @@ export default {
     mounted() {
         this.axios({
             method: 'post',
-            url: 'http://127.0.0.1:5035/get_record',
+            url: 'http://127.0.0.1:5020/get_record',
             data: { user_id: 2 },
         }).then((response) => {
             this.Companies = response.data;

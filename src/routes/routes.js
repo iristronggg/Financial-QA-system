@@ -1,4 +1,5 @@
 import DashboardLayout from '../layout/DashboardLayout.vue'
+import DashboardLayoutTopNav from '../layout/DashboardLayoutTopNav.vue'
 // GeneralViews
 import NotFound from '../pages/NotFoundPage.vue'
 
@@ -12,7 +13,8 @@ import Icons from 'src/pages/Icons.vue'
 import Maps from 'src/pages/Maps.vue'
 import Notifications from 'src/pages/Notifications.vue'
 import Upgrade from 'src/pages/Upgrade.vue'
-import Login from 'src/pages/Login.vue';
+import Login from 'src/pages/Login.vue'
+import Register from 'src/pages/Register.vue'
 import AskQuestionsChooseCompany from 'src/pages/AskQuestionsChooseCompany.vue'
 import AskQuestions from 'src/pages/AskQuestions.vue'
 import RecordsChooseCompany from 'src/pages/RecordsChooseCompany.vue'
@@ -20,45 +22,61 @@ import Records from 'src/pages/Records.vue'
 
 const routes = [{
         path: '/',
+        //name: 'About',
         component: DashboardLayout,
-        redirect: '/admin/about'
-    },
-    {
-        path: '/admin',
-        component: DashboardLayout,
-        redirect: '/admin/overview',
-        children: [
-              {
+        redirect: '/about',
+        children: [{
+                path: 'about',
+                name: 'About',
+                component: About,
+            },
+            {
                 path: 'login',
                 name: 'Login',
                 component: Login,
-              },
-              {
+            },
+            {
+                path: 'register',
+                name: 'Register',
+                component: Register,
+            },
+            {
+                path: 'overview',
+                name: 'Overview',
+                component: Overview
+            }
+        ]
+    },
+    {
+        path: '/admin',
+        component: DashboardLayoutTopNav,
+        //redirect: '/admin/overview',
+        children: [{
                 path: 'askQuestionsChooseCompany',
                 name: 'AskQuestionsChooseCompany',
                 component: AskQuestionsChooseCompany,
-              },
-        
-              {
+            },
+
+            {
                 path: 'askQuestions',
                 name: 'AskQuestions',
                 component: AskQuestions,
-              },
-        
-              {
+            },
+
+            {
                 path: 'recordsChooseCompany',
                 name: 'RecordsChooseCompany',
                 component: RecordsChooseCompany,
                 props: true,
-              },
-        
-              {
-                  path: 'records',
-                  name: 'Records',
-                  component: Records,
-                  props: true,
-              },
-            
+            },
+
+            {
+                path: 'records',
+                name: 'Records',
+                component: Records,
+                props: true,
+            },
+
             {
                 path: 'about',
                 name: 'About',

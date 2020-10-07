@@ -1,15 +1,15 @@
 <template>
 <v-container>
     <v-main>
-    <div class="login">
+    <div class="register">
         <section class="section">
         <div class="container">
-            <v-toolbar-title><strong>登入</strong></v-toolbar-title>
+            <v-toolbar-title><strong>註冊</strong></v-toolbar-title>
             <v-card-text style="margin-top: 20px;">
             <v-form>
             <div class="field">
                 <label class="label is-large" for="email"></label>
-                    <v-text-field outlined label="Email" name="email" type="email" class="input is-large" id="email" prepend-icon="mdi-account" v-model="email"></v-text-field>
+                    <v-text-field outlined label="Email (登入用)" name="email" type="email" class="input is-large" id="email" prepend-icon="mdi-email" v-model="email"></v-text-field>
             </div>
             <div class="field">
                 <label class="label is-large" for="password"></label>
@@ -18,12 +18,14 @@
                     v-model="password"></v-text-field>
                 </div>
             </div>
-            <div class="text-center">
-                <v-btn style="margin: 5px;" @click="authenticate">登入</v-btn>
+            <div class="field">
+                <label class="label is-large" for="username"></label>
+                    <v-text-field outlined label="Username (自由設定)" name="username" class="input is-large" id="username" prepend-icon="mdi-account" v-model="username"></v-text-field>
             </div>
-            <br>
+            <div class="text-center">
+                <v-btn style="margin: 5px;" @click="register">Register</v-btn>
+            </div>
             </v-form>
-            <v-icon>mdi-source-commit-start-next-local</v-icon>   沒有帳號？<a href="/#/register">點我</a>註冊。
             </v-card-text>
         </div>
         </section>
@@ -34,10 +36,11 @@
 
 <script>
 export default {
-    name: 'Login',
+    name: 'Register',
     data: () => ({
         email: '',
         password: '',
+        usernmae: '',
         proccessing: false,
         message: '',
         show3: false,
@@ -48,25 +51,26 @@ export default {
         },
     }),
     methods: {
-        authenticate() {
-            console.log('enter button');
+        register() {
+            console.log('registering...');
             console.log(this.email);
             this.axios({
                 method: 'post',
-                url: 'http://127.0.0.1:5020/login',
+                url: 'http://127.0.0.1:5020/register',
                 data: {
                     email: this.email,
                     password: this.password,
+                    username: this.username,
                 },
             })
                 .then((response) => {
-                    console.log(response);
+                    console.log(response.data);
                 })
-                // .catch((error) => {
-                //             // eslint-disable-next-line
-                //             console.log(error);
-                // });
-            this.$router.push({ path: '/admin/askQuestionsChooseCompany' });
+                .catch((error) => {
+                            // eslint-disable-next-line
+                            console.log(error);
+                });
+            this.$router.push({ path: '/login' });
             // query 帶參數過去
             // https://router.vuejs.org/zh/guide/essentials/navigation.html
         },
@@ -75,10 +79,10 @@ export default {
 </script>
 
 <style scoped>
-.login {
-    width: 500px;
-    height: 450px;
-    border: 1px solid #cccccc;
+.register {
+    width: 800px;
+    height: 600px;
+    /* border: 1px solid #cccccc; */
     /* background-color: #000000; */
     margin: auto;
     margin-top: 80px;

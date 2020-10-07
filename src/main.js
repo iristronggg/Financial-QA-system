@@ -18,6 +18,9 @@ import VueRouter from 'vue-router'
 import App from './App.vue'
 
 import vuetify from './plugins/vuetify'
+//import 'material-design-icons-iconfont/dist/material-design-icons.css'
+import '@mdi/font/css/materialdesignicons.css'
+
 // LightBootstrap plugin
 import LightBootstrap from './light-bootstrap-main'
 
@@ -36,21 +39,21 @@ Vue.use(LightBootstrap)
 
 // configure router
 const router = new VueRouter({
-  routes, // short for routes: routes
-  linkActiveClass: 'nav-item active',
-  scrollBehavior: (to) => {
-    if (to.hash) {
-      return {selector: to.hash}
-    } else {
-      return { x: 0, y: 0 }
+    routes, // short for routes: routes
+    linkActiveClass: 'nav-item active',
+    scrollBehavior: (to) => {
+        if (to.hash) {
+            return { selector: to.hash }
+        } else {
+            return { x: 0, y: 0 }
+        }
     }
-  }
 })
 
 /* eslint-disable no-new */
 new Vue({
-  el: '#app',
-  vuetify,
-  render: h => h(App),
-  router
+    el: '#app',
+    vuetify,
+    render: h => h(App),
+    router
 })
