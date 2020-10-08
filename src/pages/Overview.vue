@@ -95,8 +95,8 @@
         </div>
       </div>
 
-      <div class="row">
-        <div class="col-md-6">
+      <!-- <div class="row">
+        <div class="col-md-6"> -->
           <!-- <chart-card
             :chart-data="barChart.data"
             :chart-options="barChart.options"
@@ -117,9 +117,9 @@
               </div>
             </template>
           </chart-card> -->
-        </div>
+        <!-- </div>
 
-        <div class="col-md-6">
+        <div class="col-md-6"> -->
           <!-- <card>
             <template slot="header">
               <h5 class="title">Tasks</h5>
@@ -152,8 +152,8 @@
             </div>
           </card> -->
 
-        </div>
-      </div>
+        <!-- </div>
+      </div> -->
     </div>
   </div>
 </template>

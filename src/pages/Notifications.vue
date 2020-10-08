@@ -99,6 +99,7 @@
   import Card from 'src/components/Cards/Card.vue'
 
   export default {
+    name: 'Notifications',
     components: {
       Card
     },

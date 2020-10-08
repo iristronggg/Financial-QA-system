@@ -7,11 +7,11 @@
         <p>登入</p>
       </sidebar-link>
       <sidebar-link to="/register">
-        <i class="nc-icon nc-atom"></i>
+        <i class="nc-icon nc-badge"></i>
         <p>註冊</p>
       </sidebar-link>
       <sidebar-link to="/about">
-        <i class="nc-icon nc-app"></i>
+        <i class="nc-icon nc-atom"></i>
         <p>關於我們</p>
       </sidebar-link>
       <sidebar-link to="/admin/askQuestionsChooseCompany">
@@ -24,14 +24,13 @@
       </sidebar-link>
       
       <sidebar-link to="/overview">
-        <i class="nc-icon nc-puzzle-10"></i>
+        <i style="vertical-align: none;" class="nc-icon nc-puzzle-10"></i>
         <p>統計資訊</p>
       </sidebar-link>
 
 
     </side-bar>
     <div class="main-panel">
-      <top-navbar></top-navbar>
       <dashboard-content @click="toggleSidebar"></dashboard-content>
     </div>
   </div>
@@ -61,3 +60,14 @@
   }
 
 </script>
+
+<style>
+.nav-link p {
+  font-size: 15px;
+  vertical-align: middle;
+}
+
+.nav-link i {
+  vertical-align: none;
+}
+</style>

@@ -7,11 +7,11 @@
         <p>登入</p>
       </sidebar-link>
       <sidebar-link to="/register">
-        <i class="nc-icon nc-atom"></i>
+        <i class="nc-icon nc-badge"></i>
         <p>註冊</p>
       </sidebar-link>
       <sidebar-link to="/about">
-        <i class="nc-icon nc-app"></i>
+        <i class="nc-icon nc-atom"></i>
         <p>關於我們</p>
       </sidebar-link>
       <sidebar-link to="/admin/askQuestionsChooseCompany">
