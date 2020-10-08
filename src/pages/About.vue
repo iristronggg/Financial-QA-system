@@ -166,10 +166,26 @@
    
 }
 
+@keyframes scaleDraw {  /*定义关键帧、scaleDrew是需要绑定到选择器的关键帧名称*/
+            0%{
+                transform: scale(1);  /*开始为原始大小*/
+            }
+            25%{
+                transform: scale(1.1); /*放大1.1倍*/
+            }
+            50%{
+                transform: scale(1);
+            }
+            75%{
+                transform: scale(1.1);
+            }
+        }
+        
 .start {
   color: #ffe384;
-  animation: shake 3s;
-  animation-iteration-count: infinite;
+  /* animation: shake 3s;
+  animation-iteration-count: infinite; */
+  animation: scaleDraw 5s ease-in-out infinite;
 }
 
 .start:hover{
