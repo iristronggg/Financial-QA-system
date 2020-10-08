@@ -16,12 +16,14 @@
       </div>
       <div style="float:right; padding:0px; margin:0px;">
         <h4 style="color:white;"> 立即開啟問答機器人</h4>
-        <h1><a href="/#/login" style="float:right; font-family: Trebuchet MS;" class="text-warning"><strong> START> </strong></a></h1>
+          <router-link to="../login"><h1 style="float:right; font-family: Trebuchet MS; margin-top: 0px;" class="start"><i class="nc-icon nc-spaceship"></i><strong> START </strong>
+          </h1></router-link>
       </div> 
       
     </div>
   </div>
 </template>
+
 <script>
   import ChartCard from 'src/components/Cards/ChartCard.vue'
   import StatsCard from 'src/components/Cards/StatsCard.vue'
@@ -120,6 +122,24 @@
     },
   }
 </script>
+
+<script>
+  // new Vue({
+  //     el: '#vm',
+  //     data () {
+  //       return { 
+  //         show: true
+  //       }
+  //     },
+  //     mounted: function () {
+  //       var self = this;
+  //       setInterval(function () {
+  //         self.show = !self.show;
+  //       }, 1000);
+  //     }
+  // });
+</script>
+
 <style type="text/css">
 .main-panel
 {
@@ -145,4 +165,23 @@
  
    
 }
+
+.start {
+  color: #ffe384;
+  animation: shake 3s;
+  animation-iteration-count: infinite;
+}
+
+.start:hover{
+  color: orange;
+}
+/* .fade-enter-active, 
+.fade-leave-active {
+  transition: opacity .8s;
+}
+
+.fade-enter, 
+.fade-leave-to {
+  opacity: 0;
+} */
 </style>

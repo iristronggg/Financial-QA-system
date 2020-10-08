@@ -76,6 +76,7 @@ export default {
     height: 300px;
     border: 1px solid #cccccc;
     background-color: white;
+    border-radius: 5px;
     opacity: 0.85;
     margin: auto;
     margin-top: 80px;
