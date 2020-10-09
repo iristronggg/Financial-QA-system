@@ -26,7 +26,7 @@ export default {
     }),
     mounted() {
         console.log(this.$route.query.companyId);
-        this.messageList.push({ body: '紀錄測試', author: 'them' });
+        // this.messageList.push({ body: '紀錄測試', author: 'them' });
         this.axios({
             method: 'post',
             url: 'http://127.0.0.1:5020/get_company_record/1111',
@@ -39,8 +39,8 @@ export default {
             console.log('===================');
             let i;
             for (i = 0; i < response.data.length; i += 1) {
-                this.messageList.push({ body: response.data[i].query_text, author: 'them' });
-                this.messageList.push({ body: response.data[i].answer, author: 'you' });
+                this.messageList.push({ body: response.data[i].query_text, author: 'you' });
+                this.messageList.push({ body: response.data[i].answer, author: 'them' });
             }
 
 

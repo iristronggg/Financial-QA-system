@@ -64,10 +64,12 @@
         </div>
 
       </div>
+      
+    
         
       
       <div class="row" style="opacity: 0.9;">
-        <div class="col-xl-5 col-md-5">
+        <div class="col-xl-6 col-md-6">
            <card class="strpied-tabled-with-hover"
                 body-classes="table-full-width table-responsive"
           >
@@ -82,78 +84,23 @@
           </card>
         </div>
 
-        <div class="col-md-4">
-          <wordcloud
+       <div class="col-xl-6 col-md-4">
+          <h4 style="color: white;font-weight:bold;">常見使用者提問</h4>
+           <wordcloud
                 :data="defaultWords"
-                nameKey="name"
+                nameKey="key"
                 valueKey="value"
+                :fontSize="fontSize"
                 :color="myColors"
                 :showTooltip="true"
+                :wordPadding="wordPadding"
+                :spiral="spiral"
                 :wordClick="wordClickHandler">
         </wordcloud>
+        
           
         </div>
       </div>
-
-      <!-- <div class="row">
-        <div class="col-md-6"> -->
-          <!-- <chart-card
-            :chart-data="barChart.data"
-            :chart-options="barChart.options"
-            :chart-responsive-options="barChart.responsiveOptions"
-            chart-type="Bar">
-            <template slot="header">
-              <h4 class="card-title">2014 Sales</h4>
-              <p class="card-category">All products including Taxes</p>
-            </template>
-            <template slot="footer">
-              <div class="legend">
-                <i class="fa fa-circle text-info"></i> Tesla Model S
-                <i class="fa fa-circle text-danger"></i> BMW 5 Series
-              </div>
-              <hr>
-              <div class="stats">
-                <i class="fa fa-check"></i> Data information certified
-              </div>
-            </template>
-          </chart-card> -->
-        <!-- </div>
-
-        <div class="col-md-6"> -->
-          <!-- <card>
-            <template slot="header">
-              <h5 class="title">Tasks</h5>
-              <p class="category">Backend development</p>
-            </template>
-            <l-table :data="tableData.data"
-                     :columns="tableData.columns">
-              <template slot="columns"></template>
-
-              <template slot-scope="{row}">
-                <td>
-                  <base-checkbox v-model="row.checked"></base-checkbox>
-                </td>
-                <td>{{row.title}}</td>
-                <td class="td-actions text-right">
-                  <button type="button" class="btn-simple btn btn-xs btn-info" v-tooltip.top-center="editTooltip">
-                    <i class="fa fa-edit"></i>
-                  </button>
-                  <button type="button" class="btn-simple btn btn-xs btn-danger" v-tooltip.top-center="deleteTooltip">
-                    <i class="fa fa-times"></i>
-                  </button>
-                </td>
-              </template>
-            </l-table>
-            <div class="footer">
-              <hr>
-              <div class="stats">
-                <i class="fa fa-history"></i> Updated 3 minutes ago
-              </div>
-            </div>
-          </card> -->
-
-        <!-- </div>
-      </div> -->
     </div>
   </div>
 </template>
@@ -183,6 +130,20 @@
     公司: '宏達電',
     問題: '',
     答案: ''
+  },
+  {
+    id: 3,
+    name: '',
+    公司: '宏達電',
+    問題: '',
+    答案: ''
+  },
+  {
+    id: 3,
+    name: '',
+    公司: '宏達電',
+    問題: '',
+    答案: ''
   }
   ]
 
@@ -200,35 +161,50 @@
   },
     data () {
       return {
-        
-   table1: {
+    fontSize: [30,80],
+    table1: {
           columns: [...tableColumns],
           data: [...tableData]
         },
-         myColors: ['#1f77b4', '#629fc9', '#94bedb', '#c9e0ef'],
-      defaultWords: [{
-          "name": "經營近況",
-          "value": 27
+        myColors: ['#1f77b4', '#629fc9', '#94bedb', '#c9e0ef'],
+        wordPadding: 3,
+        spiral:'rectangular',
+        defaultWords: [
+        {
+          "key": "營業收入",
+          "value": 21
+        },    
+        {
+          "key": "發展計畫",
+          "value": 21
+        },    
+        {
+          "key": "業務範圍",
+          "value": 31
         },
         {
-          "name": "公司股價",
+          "key": "市場分析",
+          "value": 11
+        },
+        {
+          "key": "經營近況",
+          "value": 15
+        },
+        {
+          "key": "公司股價",
+          "value": 11
+        },
+        {
+          "key": "新產品研發",
           "value": 32
         },
         {
-          "name": "新產品",
-          "value": 28
+          "key": "負責人",
+          "value": 11
         },
         {
-          "name": "營業收入",
-          "value": 25
-        },
-        {
-          "name": "負責人",
-          "value": 24
-        },
-        {
-          "name": "未來展望",
-          "value": 31
+          "key": "未來展望",
+          "value": 12
         }
       ],
         editTooltip: 'Edit Task',
@@ -325,6 +301,9 @@
     color: #323ea8;
 
    
+}
+.content {
+  background: url('../../public/img/star.jpg'); 
 }
 
 #searchTitle:hover{
