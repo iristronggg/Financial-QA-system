@@ -29,9 +29,10 @@ export default {
         // this.messageList.push({ body: '紀錄測試', author: 'them' });
         this.axios({
             method: 'post',
-            url: 'http://127.0.0.1:5020/get_company_record/1111',
-            // params: { companyID: 1111 },
-            data: { user_id: 2 },
+            url: 'http://127.0.0.1:5020/get_company_record',
+            // params: { companyID: this.$route.query.companyId },
+            data: { user_id: 2,
+            companyID: this.$route.query.companyId },
         }).then((response) => {
             console.log('=====records=======');
             console.log(response);
