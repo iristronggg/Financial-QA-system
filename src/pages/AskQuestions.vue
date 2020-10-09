@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <h2 style="color: white">{{this.$route.query.Name}},{{this.$route.query.Year}},{{this.$route.query.Season}}</h2>
+        <h2 style="color: white; margin-top: 10px; margin-left: 10px">{{this.$route.query.Name}},{{this.$route.query.Year}},{{this.$route.query.Season}}</h2>
       <AskQuestions
         iconColorProp="#e6e6e6"
         messageOutColorProp="#4d9e93"

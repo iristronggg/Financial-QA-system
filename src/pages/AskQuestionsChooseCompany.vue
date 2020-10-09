@@ -105,11 +105,12 @@ export default {
                 console.log(response.data);
                 this.selectName = response.data.short_name;
                 console.log(this.selectName);
+                this.$router.push({ path: '/admin/askQuestions', query: { companyId: this.selectCompany, Name: this.selectName, Year: this.selectYear, Season: this.selectSeason } });
             }).catch((error) => {
                 // eslint-disable-next-line
                 //console.log('getCompanyNames');
             });
-            this.$router.push({ path: '/admin/askQuestions', query: { companyId: this.selectCompany, Name: this.selectName, Year: this.selectYear, Season: this.selectSeason } });
+            
             // query 帶參數過去
             // https://router.vuejs.org/zh/guide/essentials/navigation.html
         },
