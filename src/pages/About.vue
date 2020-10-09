@@ -187,7 +187,7 @@
   color: #ffe384;
   /* animation: shake 3s;
   animation-iteration-count: infinite; */
-  animation: scaleDraw 5s ease-in-out infinite;
+  animation: scaleDraw 3s ease-in-out infinite;
 }
 
 .start:hover{
