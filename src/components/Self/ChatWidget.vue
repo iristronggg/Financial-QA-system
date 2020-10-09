@@ -100,7 +100,11 @@ export default {
     right: 50px;
     max-width: 1000px;
     max-height: 500px;
+    margin-right: 0pm;
+    margin-bottom: 10px;
     width: 80%;
+    /* margin-left: 600px; */
+    padding-left: 100px;
     z-index: 10000;
     transform: scale(0);
     transform-origin: right bottom;
