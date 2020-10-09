@@ -2,21 +2,22 @@
   <div class="content">
     <div class="container-fluid">
       <div>
-          <h2 style="color:white"><i class="nc-icon nc-single-copy-04"></i>｜想要快速獲得年報或財報資訊嗎？</h2>
+          <h2 style="color:white"><i class="nc-icon nc-single-copy-04"></i>｜想要快速獲得<b>年報</b>或<b>財報</b>資訊嗎？</h2>
           
       </div>
       
 
-      <div style="margin:20px; float:right">
-        <img src="../../public/img/report.png" width=70% style="float: right">
+      <div style="padding: 0px; margin:0px; float:center;">
+        <img src="../../public/img/report_img.jpg" width=60% style="float:center; display:block; margin:auto;">
       </div>
+      <br>
 
-      <div style="padding: 0px; margin:0px;">
-        <h2 style="text-align: center; color:white; font-family: Trebuchet MS;"><strong>FinAncer</strong>, Find Answer ! </h2>
+      <div style="padding: 0px; margin:0px; float:left; margin-left: 10px;">
+        <h1 style="font-family: Sansita" class="slogan"><strong>FinAncer</strong>, Find Answer ! </h1>
       </div>
-      <div style="float:right; padding:0px; margin:0px;">
-        <h4 style="color:white;"> 立即開啟問答機器人</h4>
-          <router-link to="../login"><h1 style="float:right; font-family: Trebuchet MS; margin-top: 0px;" class="start"><i class="nc-icon nc-spaceship"></i><strong> START </strong>
+      <div style="float:right; padding:0px; margin:0px; margin-top: 10px;">
+        <h4 style="color:white; margin-left: 40px;">  立即開始問答體驗 </h4>
+          <router-link to="../login"><h1 style="float:right; padding-right: 20px; font-family: Trebuchet MS; margin-top: 0px;" class="start"><i class="nc-icon nc-spaceship"></i><strong> START </strong>
           </h1></router-link>
       </div> 
       
@@ -141,6 +142,7 @@
 </script>
 
 <style type="text/css">
+@import url('https://fonts.googleapis.com/css2?family=Sansita:wght@700;800&display=swap');
 .main-panel
 {
   /*  background: linear-gradient(#062274, #2563f4); 
@@ -191,6 +193,13 @@
 .start:hover{
   color: orange;
 }
+
+.slogan {
+  text-align: center;
+  color:white;
+  font-family: 'Sansita';
+}
+
 /* .fade-enter-active, 
 .fade-leave-active {
   transition: opacity .8s;

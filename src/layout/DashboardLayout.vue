@@ -2,6 +2,10 @@
   <div class="wrapper">
     <side-bar>
       <mobile-menu slot="content"></mobile-menu>
+      <sidebar-link to="/about">
+        <i class="nc-icon nc-atom"></i>
+        <p>開始</p>
+      </sidebar-link>
       <sidebar-link to="/login">
         <i class="nc-icon nc-circle-09"></i>
         <p>登入</p>
@@ -9,10 +13,6 @@
       <sidebar-link to="/register">
         <i class="nc-icon nc-badge"></i>
         <p>註冊</p>
-      </sidebar-link>
-      <sidebar-link to="/about">
-        <i class="nc-icon nc-atom"></i>
-        <p>關於我們</p>
       </sidebar-link>
       <sidebar-link to="/admin/askQuestionsChooseCompany">
         <i class="nc-icon nc-bulb-63"></i>

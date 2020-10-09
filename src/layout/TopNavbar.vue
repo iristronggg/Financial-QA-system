@@ -1,8 +1,8 @@
 <template>
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
-      <!-- <a class="navbar-brand" href="#">Dashboard</a>
-      <button type="button"
+      <span class="navbar-toggler-bar burger-lines" style="color: gray">企業年報暨財報問答系統</span>
+      <!-- <button type="button"
               class="navbar-toggler navbar-toggler-right"
               :class="{toggled: $sidebar.showSidebar}"
               aria-controls="navigation-index"
@@ -48,8 +48,8 @@
             </a>
           </li> -->
           <Notifications></Notifications>
-          <base-dropdown title="User">
-            <a class="dropdown-item" href="#" @click="notifyVue('top', 'center')">Logout</a>
+          <base-dropdown title="Emily">
+            <a class="dropdown-item" href="#/about" onclick="alert('登出成功!');">Logout</a>
             <!-- <a class="dropdown-item" href="#">Another action</a>
             <a class="dropdown-item" href="#">Something</a>
             <a class="dropdown-item" href="#">Another action</a>

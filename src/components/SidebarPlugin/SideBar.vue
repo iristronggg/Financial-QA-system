@@ -9,9 +9,10 @@
             <!-- <div class="logo-img">
                 <img src="img/vue-logo.png" alt="">
             </div> -->
-            <i class="nc-icon nc-planet">
-          {{title}}
-            </i>
+            <div class="nc-icon">
+              <i class="nc-icon nc-planet" style="font-size: 30px;"></i>
+              <p style="font-family: Sansita; font-size: 30px;">{{title}}</p>
+            </div>
         </a>
       </div>
 

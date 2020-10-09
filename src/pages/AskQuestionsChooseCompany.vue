@@ -6,7 +6,7 @@
             <v-main>
                 <div class="chooseCompany">
                     <v-card-text style="margin-top: 20px;">
-                        <v-toolbar-title><strong>選擇公司</strong></v-toolbar-title>
+                        <v-toolbar-title><strong>提出查詢：選擇公司</strong></v-toolbar-title>
                         <br>
 
                         <v-autocomplete

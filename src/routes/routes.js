@@ -14,6 +14,7 @@ import Maps from 'src/pages/Maps.vue'
 import Notifications from 'src/pages/Notifications.vue'
 import Upgrade from 'src/pages/Upgrade.vue'
 import Login from 'src/pages/Login.vue'
+import Logout from 'src/pages/Logout.vue'
 import Register from 'src/pages/Register.vue'
 import AskQuestionsChooseCompany from 'src/pages/AskQuestionsChooseCompany.vue'
 import AskQuestions from 'src/pages/AskQuestions.vue'
@@ -39,6 +40,11 @@ const routes = [{
                 path: 'register',
                 name: 'Register',
                 component: Register,
+            },
+            {
+                path: 'logout',
+                name: 'Logout',
+                component: Logout,
             },
             {
                 path: 'overview',
