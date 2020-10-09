@@ -74,6 +74,7 @@ export default {
         selectCompany: null,
         selectYear: null,
         selectSeason: null,
+        selectName: null,
     }),
     mounted() {
         // getCompanyNames() {
@@ -94,9 +95,21 @@ export default {
     },
     methods: {
         authenticate() {
-            console.log('enter button');
-            console.log(this.selectCompany);
-            this.$router.push({ path: '/admin/askQuestions', query: { companyId: this.selectCompany, Year: this.selectYear, Season: this.selectSeason } });
+            this.axios({
+                method: 'post',
+                url: 'http://127.0.0.1:5020/get_company_name',
+                data: { companyID: this.selectCompany },
+            }).then((response) => {
+                console.log('getttttt');
+                console.log(response);
+                console.log(response.data);
+                this.selectName = response.data.short_name;
+                console.log(this.selectName);
+            }).catch((error) => {
+                // eslint-disable-next-line
+                //console.log('getCompanyNames');
+            });
+            this.$router.push({ path: '/admin/askQuestions', query: { companyId: this.selectCompany, Name: this.selectName, Year: this.selectYear, Season: this.selectSeason } });
             // query 帶參數過去
             // https://router.vuejs.org/zh/guide/essentials/navigation.html
         },

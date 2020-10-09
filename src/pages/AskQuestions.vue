@@ -1,5 +1,6 @@
 <template>
     <div id="app">
+        <h2 style="color: white">{{this.$route.query.Name}},{{this.$route.query.Year}},{{this.$route.query.Season}}</h2>
       <AskQuestions
         iconColorProp="#e6e6e6"
         messageOutColorProp="#4d9e93"
@@ -31,6 +32,7 @@ export default {
     mounted() {
         console.log('=============== test params ==============');
         console.log(this.$route.query.companyId);
+        console.log(this.$route.query.Name);
         console.log(this.$route.query.Year);
         console.log(this.$route.query.Season);
         console.log('=============== test params ==============');

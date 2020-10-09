@@ -69,7 +69,7 @@
         
       
       <div class="row" style="opacity: 0.9;">
-        <div class="col-xl-6 col-md-6">
+        <div class="col-xl-8 col-md-6">
            <card class="strpied-tabled-with-hover"
                 body-classes="table-full-width table-responsive"
           >
@@ -84,8 +84,8 @@
           </card>
         </div>
 
-       <div class="col-xl-6 col-md-4">
-          <h4 style="color: white;font-weight:bold;">常見使用者提問</h4>
+       <div class="col-xl-4 col-md-4">
+          <h4 style="color: white;font-weight:bold; margin-top:10px;">常見使用者提問</h4>
            <wordcloud
                 :data="defaultWords"
                 nameKey="key"
@@ -114,36 +114,36 @@
     id: 1,
     name: 'Dakota Rice',
     公司: '台積電',
-    問題: '最近研發的產品',
-    答案: ''
+    問題: '今年收入多少',
+    答案: '26,018,013'
   },
   {
     id: 2,
     name: '',
-    公司: '台糖',
-    問題: '',
-    答案: ''
+    公司: '中化生',
+    問題: '公司在美國的市場佔有率為何',
+    答案: '42.2%'
   },
   {
     id: 3,
     name: '',
-    公司: '宏達電',
-    問題: '',
-    答案: ''
+    公司: '勝一',
+    問題: '員工的退休金',
+    答案: '本公司按月以不低於每月工資6%提繳退休金'
   },
   {
-    id: 3,
+    id: 4,
     name: '',
-    公司: '宏達電',
-    問題: '',
-    答案: ''
+    公司: '中化生',
+    問題: '簽證會計師',
+    答案: '張淑瓊'
   },
   {
-    id: 3,
+    id: 5,
     name: '',
     公司: '宏達電',
-    問題: '',
-    答案: ''
+    問題: '今年研發經費有多少',
+    答案: '9,161,114'
   }
   ]
 
