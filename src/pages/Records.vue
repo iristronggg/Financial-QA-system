@@ -5,8 +5,11 @@
         messageOutColorProp="#4d9e93"
         messageInColorProp="#f1f0f0"
         :messageListProp="messageList"
+        :messageTime="messageTime"
         :initOpenProp="initOpen"
         />
+
+       
     </v-container>
 </template>
 
@@ -21,6 +24,7 @@ export default {
     },
     data: () => ({
         messageList: [],
+        messageTime: [],
         initOpen: true,
         toggledOpen: false,
     }),
@@ -37,12 +41,16 @@ export default {
             console.log('=====records=======');
             console.log(response);
             console.log(response.data);
-            console.log('===================');
+           
             let i;
             for (i = 0; i < response.data.length; i += 1) {
+                this.messageList.push({ body: "======================= " + response.data[i].year + "  "+ response.data[i].season + " ======================= " , author: 'time'});
                 this.messageList.push({ body: response.data[i].query_text, author: 'you' });
                 this.messageList.push({ body: response.data[i].answer, author: 'them' });
+                // this.messageTime.push( response.data[i].created_at );
             }
+            console.log(this.messageTime);
+            console.log('===================');
 
 
             // this.messageList = response.data;
@@ -55,6 +63,5 @@ export default {
 </script>
 
 
-<style>
-
+<style scoped> 
 </style>

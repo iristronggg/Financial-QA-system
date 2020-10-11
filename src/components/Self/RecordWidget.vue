@@ -10,7 +10,8 @@
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><g fill="none" stroke="#ffffff" stroke-width="10" stroke-miterlimit="10" stroke-linecap="round"><path d="M10 10l45 45M10 55l45-45"/></g></svg>
       </div>
       <div ref="chatArea" class="chat-area" :style="{background: messageBackgroundColorProp}">
-        <p v-for="message in messageListProp" :key="message.body" class="message" :style="[message.author === 'you' ? {background: messageOutColorProp} : {background: messageInColorProp}]" :class="{'message-out': message.author === 'you', 'message-in': message.author !== 'you' }">
+        <!-- <p v-for="messageTime in messageTime"  style="font-size:13px;">{{ messageTime }}</p> -->
+        <p v-for="message in messageListProp" :key="message.body" class="message"   :style="{ 'background: messageOutColorProp' : message.author === 'you' , 'background: messageInColorProp' : message.author === 'them' }" :class="{'message-out': message.author === 'you', 'message-in': message.author === 'them',   'message-time': message.author === 'time'}">
           {{ message.body }}
         </p>
       </div>
@@ -40,8 +41,13 @@ export default {
             type: String,
             default: '#f1f0f0',
         },
+        messageTimeColorProp: {
+            type: String,
+            default: '##3a76de',
+        },
         messageListProp: Array,
         initOpenProp: Boolean,
+        messageTime: Array,
     },
     data: () => ({
         youMessage: '',
@@ -123,11 +129,16 @@ export default {
     font-size: .8em;
   }
   .message-out {
-    color: #ffffff;
+    background: #f1f0f0;
+    color: black;
     margin-left: 50%;
   }
   .message-in {
     background: #f1f0f0;
+    color: black;
+  }
+  .message-time {
+    background: white;
     color: black;
   }
   .chat-inputs {
