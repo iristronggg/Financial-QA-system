@@ -26,7 +26,7 @@
             </div>
             <div slot="content">
               <p class="card-category"><strong>No.1</strong></p>
-              <h5 class="card-title">台灣積體電路製造股份有限公司</h5>
+              <h5 class="card-title">{{ items[0].company_name }}</h5>
             </div>
             
           </stats-card>
@@ -43,7 +43,7 @@
             </div>
             <div slot="content">
               <p class="card-category"><strong>No.2</strong></p>
-              <h5 class="card-title">台灣中油股份有限公司</h5>
+              <h5 class="card-title">{{ items[1].company_name }}</h5>
             </div>         
           </stats-card>
         </div>
@@ -58,7 +58,7 @@
             </div>
             <div slot="content">
               <p class="card-category"><strong>No.3</strong></p>
-              <h5 class="card-title">台達電子工業股份有限公司</h5>
+              <h5 class="card-title">{{ items[2].company_name }}</h5>
             </div>         
           </stats-card>
         </div>
@@ -110,42 +110,7 @@
   import LTable from 'src/components/Table.vue'
   import wordcloud from 'vue-wordcloud'
   const tableColumns = ['公司', '問題', '答案']
-  const tableData = [{
-    id: 1,
-    name: 'Dakota Rice',
-    公司: '台積電',
-    問題: '今年收入多少',
-    答案: '26,018,013'
-  },
-  {
-    id: 2,
-    name: '',
-    公司: '中化生',
-    問題: '公司在美國的市場佔有率為何',
-    答案: '42.2%'
-  },
-  {
-    id: 3,
-    name: '',
-    公司: '勝一',
-    問題: '員工的退休金',
-    答案: '本公司按月以不低於每月工資6%提繳退休金'
-  },
-  {
-    id: 4,
-    name: '',
-    公司: '中化生',
-    問題: '簽證會計師',
-    答案: '張淑瓊'
-  },
-  {
-    id: 5,
-    name: '',
-    公司: '宏達電',
-    問題: '今年研發經費有多少',
-    答案: '9,161,114'
-  }
-  ]
+  const tableData = []
 
   export default {
     components: {
@@ -154,6 +119,63 @@
       StatsCard,
       wordcloud
     },
+    mounted() {
+    
+      this.axios({
+          method: 'get',
+          url: 'http://127.0.0.1:5020/get_hot_company',
+      }).then((response) => {
+        this.items = response.data;
+        // console.log(this.items)
+          
+      }).catch((error) => {
+        
+      });
+
+       this.axios({
+          method: 'get',
+          url: 'http://127.0.0.1:5020/get_random_record',
+      }).then((response) => {
+        
+        console.log(response.data)
+        this.table1.data = [{
+          id: 1,
+          公司: response.data[0].company_name,
+          問題: response.data[0].query_text,
+          答案: response.data[0].answer
+        },
+        {
+          id: 2,
+          公司: response.data[1].company_name,
+          問題: response.data[1].query_text,
+          答案: response.data[1].answer
+        },
+        {
+          id: 3,
+          公司: response.data[2].company_name,
+          問題: response.data[2].query_text,
+          答案: response.data[2].answer
+        },
+        {
+          id: 4,
+          公司: response.data[3].company_name,
+          問題: response.data[3].query_text,
+          答案: response.data[3].answer
+        },
+        {
+          id: 5,
+          公司: response.data[4].company_name,
+          問題: response.data[4].query_text,
+          答案: response.data[4].answer
+        }
+        ]
+                
+      }).catch((error) => {
+        
+      });
+
+        
+    },
     methods: {
     wordClickHandler(name, value, vm) {
       console.log('wordClickHandler', name, value, vm);
@@ -161,6 +183,7 @@
   },
     data () {
       return {
+        items: [],
     fontSize: [30,80],
     table1: {
           columns: [...tableColumns],
@@ -276,7 +299,7 @@
             }]
           ]
         },
-        tableData: {
+       /*tableData: {
           data: [
             {title: 'Sign contract for "What are conference organizers afraid of?"', checked: false},
             {title: 'Lines From Great Russian Literature? Or E-mails From My Boss?', checked: true},
@@ -287,8 +310,7 @@
             {title: 'Create 4 Invisible User Experiences you Never Knew About', checked: false},
             {title: 'Read "Following makes Medium better"', checked: false},
             {title: 'Unfollow 5 enemies from twitter', checked: false}
-          ]
-        }
+          ]*/
       }
     }
   }

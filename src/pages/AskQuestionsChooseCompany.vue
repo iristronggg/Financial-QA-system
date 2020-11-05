@@ -26,8 +26,7 @@
                         chips
                         input
                         filled
-                        @compositionstart="compositionstart($event)"
-                        @compositionend="compositionend($event)"
+                      
                         ></v-autocomplete>
 
                         <v-row>
@@ -96,20 +95,42 @@ export default {
     methods: {
         authenticate() {
             this.axios({
-                method: 'post',
-                url: 'http://127.0.0.1:5020/get_company_name',
-                data: { companyID: this.selectCompany },
+                    method: 'post',
+                    url: 'http://127.0.0.1:5020/check_company_data_exist',
+                    data: {
+                        year: this.selectYear,
+                        season: this.selectSeason,
+                        company: this.selectCompany,
+                    },
             }).then((response) => {
-                console.log('getttttt');
-                console.log(response);
-                console.log(response.data);
-                this.selectName = response.data.short_name;
-                console.log(this.selectName);
-                this.$router.push({ path: '/admin/askQuestions', query: { companyId: this.selectCompany, Name: this.selectName, Year: this.selectYear, Season: this.selectSeason } });
+            
+                if(response.data.exist){
+                     this.axios({
+                        method: 'post',
+                        url: 'http://127.0.0.1:5020/get_company_name',
+                        data: { companyID: this.selectCompany },
+                    }).then((response) => {
+                        console.log('getttttt');
+                        console.log(response);
+                        console.log(response.data);
+                        this.selectName = response.data.short_name;
+                        console.log(this.selectName);
+                        
+                        this.$router.push({ path: '/admin/askQuestions', query: { companyId: this.selectCompany, Name: this.selectName, Year: this.selectYear, Season: this.selectSeason } });
+                    }).catch((error) => {
+                        // eslint-disable-next-line
+                        //console.log('getCompanyNames');
+                    });
+
+                } else {
+                    alert('暫時不提供指定時間下查詢');
+                }
+
+                
             }).catch((error) => {
-                // eslint-disable-next-line
-                //console.log('getCompanyNames');
+  
             });
+
             
             // query 帶參數過去
             // https://router.vuejs.org/zh/guide/essentials/navigation.html
